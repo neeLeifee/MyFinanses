@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Media;
 
 namespace SchoolProject
 {
@@ -126,6 +127,8 @@ namespace SchoolProject
         private void QuitBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            SoundPlayer CloseSound = new SoundPlayer(@"..\..\sounds\close.wav");
+            CloseSound.Play();
         }
     }
 }

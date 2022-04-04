@@ -16,6 +16,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Collections.ObjectModel;
+using System.Media;
 
 namespace SchoolProject
 {
@@ -51,6 +52,8 @@ namespace SchoolProject
         private void QuitBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            SoundPlayer CloseSound = new SoundPlayer(@"..\..\sounds\close.wav");
+            CloseSound.Play();
         }
 
         private void TitleText_MouseDown(object sender, MouseButtonEventArgs e)

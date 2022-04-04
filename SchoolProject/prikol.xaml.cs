@@ -56,6 +56,8 @@ namespace SchoolProject
         private void QuitBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            SoundPlayer CloseSound = new SoundPlayer(@"..\..\sounds\close.wav");
+            CloseSound.Play();
         }
     }
 }

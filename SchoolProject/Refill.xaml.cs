@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Media;
 
 namespace SchoolProject
 {
@@ -46,6 +47,8 @@ namespace SchoolProject
                     dataBase.OpenConnection();
                     command.ExecuteNonQuery();
                     dataBase.CloseConnection();
+                    SoundPlayer moneymoneymoney = new SoundPlayer(@"..\..\sounds\moneymoneymoney.wav");
+                    moneymoneymoney.Play();
                 }
                 else
                 {
